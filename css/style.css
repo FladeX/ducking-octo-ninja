@@ -1,3 +1,31 @@
+html,
 body {
-  background: #eaeaea;
+  margin: 0;
+  padding: 0;
+}
+.main {
+  background: url('../img/drinkme.jpg') 0 0 repeat;
+  font-family: Helvetica, Verdana, sans-serif;
+  margin: 0;
+  padding: 30px 50px 80px;
+}
+.main__title {
+  font-size: 32px;
+  margin-top: 0;
+  text-align: center;
+}
+.chapter {
+  background: #efefef;
+  font-family: Verdana, sans-serif;
+  margin-top: 40px;
+  padding: 40px 30px;
+}
+.chapter__title {
+  color: #111;
+  font-size: 26px;
+}
+.chapter__text {
+  color: #212121;
+  font-size: 13px;
+  line-height: 160%;
 }
