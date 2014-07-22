@@ -19,6 +19,7 @@ body {
   font-family: Verdana, sans-serif;
   margin-top: 40px;
   padding: 40px 30px;
+  position: relative;
 }
 .chapter__title {
   color: #111;
@@ -28,4 +29,33 @@ body {
   color: #212121;
   font-size: 13px;
   line-height: 160%;
+}
+.chapter__controls {
+  position: absolute;
+  top: 50px;
+  right: 30px;
+  visibility: hidden;
+}
+.chapter__controls-icon {
+  cursor: pointer;
+  display: inline-block;
+  height: 24px;
+  margin-left: 10px;
+  opacity: 0.5;
+  width: 24px;
+}
+.chapter__controls-icon:hover {
+  opacity: 1;
+}
+.chapter__controls-icon_mode_add {
+  background: url('../img/icon_add.png') no-repeat;
+}
+.chapter__controls-icon_mode_edit {
+  background: url('../img/icon_edit.png') no-repeat;
+}
+.chapter__controls-icon_mode_delete {
+  background: url('../img/icon_delete.png') no-repeat;
+}
+.chapter:hover .chapter__controls {
+  visibility: visible;
 }

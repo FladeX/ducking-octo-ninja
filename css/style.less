@@ -18,6 +18,7 @@ html, body {
     font-family: Verdana, sans-serif;
     margin-top: 40px;
     padding: 40px 30px;
+    position: relative;
     &__title {
         color: #111;
         font-size: 26px;
@@ -26,5 +27,34 @@ html, body {
         color: #212121;
         font-size: 13px;
         line-height: 160%;
+    }
+    &__controls {
+        position: absolute;
+        top: 50px;
+        right: 30px;
+        visibility: hidden;
+        &-icon {
+            cursor: pointer;
+            display: inline-block;
+            height: 24px;
+            margin-left: 10px;
+            opacity: 0.5;
+            width: 24px;
+            &:hover {
+                opacity: 1;
+            }
+            &_mode_add {
+                background: url('../img/icon_add.png') no-repeat;
+            }
+            &_mode_edit {
+                background: url('../img/icon_edit.png') no-repeat;
+            }
+            &_mode_delete {
+                background: url('../img/icon_delete.png') no-repeat;
+            }
+        }
+    }
+    &:hover &__controls {
+        visibility: visible;
     }
 }
