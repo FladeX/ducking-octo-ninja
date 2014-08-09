@@ -79,8 +79,59 @@ html[xmlns] .clearfix {
 }
 .chapter_mode_edit .chapter__editor {
   float: left;
-  height: 10px;
   width: 50%;
+}
+.chapter_mode_edit .chapter__editor-form {
+  background: #fff;
+  margin: 0;
+  padding: 15px 0;
+  width: 90%;
+}
+.chapter_mode_edit .chapter__editor-field {
+  height: 50px;
+  padding: 8px 0;
+  width: 100%;
+}
+.chapter_mode_edit .chapter__editor-field_mode_multirows {
+  height: auto;
+}
+.chapter_mode_edit .chapter__editor-label {
+  border: 1px solid #bbb;
+  display: block;
+  margin: 5px 15px;
+  padding: 5px;
+}
+.chapter_mode_edit .chapter__editor-title {
+  border: 0;
+  font-size: 24px;
+  line-height: 32px;
+  padding: 0;
+  width: 100%;
+}
+.chapter_mode_edit .chapter__editor-content {
+  border: 0;
+  display: block;
+  font-size: 14px;
+  line-height: 20px;
+  min-height: 200px;
+  padding: 0;
+  width: 100%;
+}
+.chapter_mode_edit .chapter__editor-submit {
+  background: #00bb00;
+  border: none;
+  border-radius: 7px;
+  color: #fff;
+  cursor: pointer;
+  display: block;
+  font-size: 24px;
+  font-weight: bold;
+  margin: 0 auto;
+  padding: 12px 24px;
+  text-shadow: 1px 1px 1px #555;
+}
+.chapter_mode_edit .chapter__editor-submit:hover {
+  background: #33cc33;
 }
 .chapter_mode_edit .chapter__content {
   float: left;
