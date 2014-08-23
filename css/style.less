@@ -74,65 +74,69 @@ html[xmlns] .clearfix {
             }
         }
     }
+    &__editor {
+        display: none;
+        float: left;
+        width: 50%;
+        &-form {
+            background: #fff;
+            margin: 0;
+            padding: 15px 0;
+            width: 90%;
+        }
+        &-field {
+            height: 50px;
+            padding: 8px 0;
+            width: 100%;
+            &_mode_multirows {
+                height: auto;
+            }
+        }
+        &-label {
+            border: 1px solid #bbb;
+            display: block;
+            margin: 5px 15px;
+            padding: 5px;
+        }
+        &-title {
+            border: 0;
+            font-size: 24px;
+            line-height: 32px;
+            padding: 0;
+            width: 100%;
+        }
+        &-content {
+            border: 0;
+            display: block;
+            font-size: 14px;
+            line-height: 20px;
+            min-height: 200px;
+            padding: 0;
+            width: 100%;
+        }
+        &-submit {
+            background: #00bb00;
+            border: none;
+            border-radius: 7px;
+            color: #fff;
+            cursor: pointer;
+            display: block;
+            font-size: 24px;
+            font-weight: bold;
+            margin: 0 auto;
+            padding: 12px 24px;
+            text-shadow: 1px 1px 1px #555;
+            &:hover {
+                background: #33cc33;
+            }
+        }
+    }
     &:hover &__controls {
         visibility: visible;
     }
     &_mode_edit {
         .chapter__editor {
-            float: left;
-            width: 50%;
-            &-form {
-                background: #fff;
-                margin: 0;
-                padding: 15px 0;
-                width: 90%;
-            }
-            &-field {
-                height: 50px;
-                padding: 8px 0;
-                width: 100%;
-                &_mode_multirows {
-                    height: auto;
-                }
-            }
-            &-label {
-                border: 1px solid #bbb;
-                display: block;
-                margin: 5px 15px;
-                padding: 5px;
-            }
-            &-title {
-                border: 0;
-                font-size: 24px;
-                line-height: 32px;
-                padding: 0;
-                width: 100%;
-            }
-            &-content {
-                border: 0;
-                display: block;
-                font-size: 14px;
-                line-height: 20px;
-                min-height: 200px;
-                padding: 0;
-                width: 100%;
-            }
-            &-submit {
-                background: #00bb00;
-                border: none;
-                border-radius: 7px;
-                color: #fff;
-                cursor: pointer;
-                display: block;
-                font-size: 24px;
-                font-weight: bold;
-                margin: 0 auto;
-                padding: 12px 24px;
-                text-shadow: 1px 1px 1px #555;
-                &:hover {
-                    background: #33cc33;
-                }
-            }
+            display: block;
         }
         .chapter__content {
             float: left;

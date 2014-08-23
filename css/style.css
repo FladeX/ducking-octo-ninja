@@ -74,41 +74,39 @@ html[xmlns] .clearfix {
 .chapter__controls-icon_mode_delete {
   background: url('../img/icon_delete.png') no-repeat;
 }
-.chapter:hover .chapter__controls {
-  visibility: visible;
-}
-.chapter_mode_edit .chapter__editor {
+.chapter__editor {
+  display: none;
   float: left;
   width: 50%;
 }
-.chapter_mode_edit .chapter__editor-form {
+.chapter__editor-form {
   background: #fff;
   margin: 0;
   padding: 15px 0;
   width: 90%;
 }
-.chapter_mode_edit .chapter__editor-field {
+.chapter__editor-field {
   height: 50px;
   padding: 8px 0;
   width: 100%;
 }
-.chapter_mode_edit .chapter__editor-field_mode_multirows {
+.chapter__editor-field_mode_multirows {
   height: auto;
 }
-.chapter_mode_edit .chapter__editor-label {
+.chapter__editor-label {
   border: 1px solid #bbb;
   display: block;
   margin: 5px 15px;
   padding: 5px;
 }
-.chapter_mode_edit .chapter__editor-title {
+.chapter__editor-title {
   border: 0;
   font-size: 24px;
   line-height: 32px;
   padding: 0;
   width: 100%;
 }
-.chapter_mode_edit .chapter__editor-content {
+.chapter__editor-content {
   border: 0;
   display: block;
   font-size: 14px;
@@ -117,7 +115,7 @@ html[xmlns] .clearfix {
   padding: 0;
   width: 100%;
 }
-.chapter_mode_edit .chapter__editor-submit {
+.chapter__editor-submit {
   background: #00bb00;
   border: none;
   border-radius: 7px;
@@ -130,8 +128,14 @@ html[xmlns] .clearfix {
   padding: 12px 24px;
   text-shadow: 1px 1px 1px #555;
 }
-.chapter_mode_edit .chapter__editor-submit:hover {
+.chapter__editor-submit:hover {
   background: #33cc33;
+}
+.chapter:hover .chapter__controls {
+  visibility: visible;
+}
+.chapter_mode_edit .chapter__editor {
+  display: block;
 }
 .chapter_mode_edit .chapter__content {
   float: left;

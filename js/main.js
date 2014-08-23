@@ -32,6 +32,7 @@ Site.Views.ChapterView = Backbone.View.extend({
         console.log('add chapter');
     },
     editChapter: function() {
+        this.$el.find('.chapter').addClass('chapter_mode_edit');
         console.log('edit chapter');
     },
     deleteChapter: function() {
@@ -71,7 +72,7 @@ var chaptersView = new Site.Views.ChaptersView({ collection: chapters });
 $(document).ready(function(){
     chaptersView.render();
     $('.main').append(chaptersView.$el);
-    for (var i = 1; i <=5; i++) {
+    for (var i = 1; i <= _.size(chapters_data); i++) {
         chapters.add( new Site.Models.Chapter(chapters_data[i]) );
     }
 });
