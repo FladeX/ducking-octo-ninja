@@ -7,10 +7,21 @@
 <script src="bower_components/jquery/dist/jquery.min.js"></script>
 <script src="bower_components/underscore/underscore.js"></script>
 <script src="bower_components/backbone/backbone.js"></script>
-<script src="js/data.js"></script>
-<script src="js/main.js"></script>
 </head>
 <body>
+<script id="chapterTemplate" type="text/template">
+    <div class="chapter clearfix">
+        <div class="chapter__content">
+            <h2 class="chapter__title"><%= title %></h2>
+            <%= content %>
+        </div>
+        <div class="chapter__controls">
+            <span class="chapter__controls-icon chapter__controls-icon_mode_add"></span>
+            <span class="chapter__controls-icon chapter__controls-icon_mode_edit"></span>
+            <span class="chapter__controls-icon chapter__controls-icon_mode_delete"></span>
+        </div>
+    </div>
+</script>
 <div class="main">
     <h1 class="main__title">Alice's Adventures in Wonderland</h1>
     <div class="chapter clearfix">
@@ -94,5 +105,7 @@
         </div>
     </div>
 </div>
+<script src="js/data.js"></script>
+<script src="js/main.js"></script>
 </body>
 </html>

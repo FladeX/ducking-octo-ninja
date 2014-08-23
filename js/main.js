@@ -4,7 +4,7 @@ var Site = {
     Collections: {}
 };
 Site.Models.Chapter = Backbone.Model.extend({
-
+    defaults: chapters[1],
 });
 Site.Views.ChapterView = Backbone.View.extend({
     tagName: 'div',
@@ -25,7 +25,7 @@ Site.Views.ChapterView = Backbone.View.extend({
         var tmpl = _.template(this.template);
 
         this.$el.html(tmpl(this.model.toJSON()));
-        return $this;
+        return this;
     },
 
     addChapter: function() {
@@ -42,6 +42,10 @@ Site.Views.ChapterView = Backbone.View.extend({
     }
 });
 
+var chapter1 = new Site.Models.Chapter( chapters[1] );
+var chapterView = new Site.Views.ChapterView({ model: chapter1 });
 
 $(document).ready(function(){
-})
+    chapterView.render();
+    $('.main').append(chapterView.$el);
+});
