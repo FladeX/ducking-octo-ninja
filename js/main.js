@@ -4,7 +4,7 @@ var Site = {
     Collections: {}
 };
 Site.Models.Chapter = Backbone.Model.extend({
-    defaults: chapters_data[1],
+    defaults: chapters_data[0],
 });
 Site.Views.ChapterView = Backbone.View.extend({
     tagName: 'div',
@@ -36,10 +36,12 @@ Site.Views.ChapterView = Backbone.View.extend({
         console.log('edit chapter');
     },
     deleteChapter: function() {
+        this.$el.remove();
         console.log('delete chapter');
     },
     saveChapter: function() {
-        console.log('save chapter');
+        this.$el.find('.chapter').removeClass('chapter_mode_edit');
+        return false;
     }
 });
 Site.Collections.Chapters = Backbone.Collection.extend({
@@ -72,7 +74,7 @@ var chaptersView = new Site.Views.ChaptersView({ collection: chapters });
 $(document).ready(function(){
     chaptersView.render();
     $('.main').append(chaptersView.$el);
-    for (var i = 1; i <= _.size(chapters_data); i++) {
+    for (var i = 0; i < _.size(chapters_data); i++) {
         chapters.add( new Site.Models.Chapter(chapters_data[i]) );
     }
 });
