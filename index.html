@@ -7,6 +7,8 @@
 <script src="bower_components/jquery/dist/jquery.min.js"></script>
 <script src="bower_components/underscore/underscore.js"></script>
 <script src="bower_components/backbone/backbone.js"></script>
+<script src="bower_components/markdown/lib/markdown.js"></script>
+<script src="bower_components/to-markdown/src/to-markdown.js"></script>
 </head>
 <body>
 <script id="chapterTemplate" type="text/template">
@@ -15,12 +17,12 @@
             <form class="chapter__editor-form">
                 <div class="chapter__editor-field">
                     <label class="chapter__editor-label">
-                        <input class="chapter__editor-title" type="text" name="title" value="<%= title %>" />
+                        <input class="chapter__editor-title" type="text" name="title" value="" />
                     </label>
                 </div>
                 <div class="chapter__editor-field chapter__editor-field_mode_multirows">
                     <label class="chapter__editor-label">
-                        <textarea class="chapter__editor-content"><%= content %>
+                        <textarea class="chapter__editor-content">
                         </textarea>
                     </label>
                 </div>

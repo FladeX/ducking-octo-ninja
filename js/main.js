@@ -32,7 +32,13 @@ Site.Views.ChapterView = Backbone.View.extend({
         console.log('add chapter');
     },
     editChapter: function() {
+        var chapter = {
+            title: this.model.get('title'),
+            content: toMarkdown(this.model.get('content'))
+        };
         this.$el.find('.chapter').addClass('chapter_mode_edit');
+        this.$el.find('.chapter__editor-form .chapter__editor-title').val( chapter.title );
+        this.$el.find('.chapter__editor-form .chapter__editor-content').html( chapter.content );
         console.log('edit chapter');
     },
     deleteChapter: function() {
@@ -40,7 +46,17 @@ Site.Views.ChapterView = Backbone.View.extend({
         console.log('delete chapter');
     },
     saveChapter: function() {
+        var chapter = {
+            title: this.$el.find('.chapter__editor-title').val(),
+            content: markdown.toHTML(this.$el.find('.chapter__editor-content').text())
+        };
+        console.log( chapter.content );
+        this.model.set({
+            title: chapter.title,
+            content: chapter.content
+        });
         this.$el.find('.chapter').removeClass('chapter_mode_edit');
+        this.render();
         return false;
     }
 });
