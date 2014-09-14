@@ -41,7 +41,26 @@ Site.Views.ChapterView = Backbone.View.extend({
             title: this.model.get('title'),
             content: toMarkdown(this.model.get('content'))
         };
-        this.$el.find('.chapter').addClass('chapter_mode_edit');
+
+        var $chapter = this.$el;
+        if (!$chapter.find('.chapter_mode_edit').hasClass('chapter')) {
+            $chapter.find('.chapter__content').css({position:'relative'}).animate({
+                right: '-50%',
+                width: '50%'
+            }, 1000, function() {
+                $chapter.find('.chapter__content').css({position:'static'})
+                $chapter.find('.chapter__editor-form').animate({
+                    opacity: 1
+                }, 1000);
+            });
+            $chapter.find('.chapter__editor-form').animate({
+                display: 'block',
+                opacity: 0
+            }, 1000, function() {
+                $chapter.find('.chapter').addClass('chapter_mode_edit');
+            });
+        }
+
         this.$el.find('.chapter__editor-form .chapter__editor-title').val( chapter.title );
         this.$el.find('.chapter__editor-form .chapter__editor-content').html( chapter.content );
     },

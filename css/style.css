@@ -36,8 +36,10 @@ html[xmlns] .clearfix {
   box-sizing: border-box;
   font-family: Verdana, sans-serif;
   margin-top: 40px;
+  overflow: hidden;
   padding: 40px 30px;
   position: relative;
+  text-align: right;
   width: 100%;
 }
 .chapter__content,
@@ -45,11 +47,13 @@ html[xmlns] .clearfix {
   color: #212121;
   font-size: 13px;
   line-height: 160%;
+  text-align: left;
 }
 .chapter__title {
   color: #111;
   font-size: 26px;
   padding-right: 120px;
+  text-align: left;
 }
 .chapter__controls {
   position: absolute;
