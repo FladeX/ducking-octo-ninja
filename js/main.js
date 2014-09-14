@@ -6,6 +6,7 @@ var Site = {
 Site.Models.Chapter = Backbone.Model.extend({});
 Site.Views.ChapterView = Backbone.View.extend({
     tagName: 'div',
+    className: 'chapter clearfix',
     template: $('#chapterTemplate').html(),
 
     events: {
@@ -43,7 +44,7 @@ Site.Views.ChapterView = Backbone.View.extend({
         };
 
         var $chapter = this.$el;
-        if (!$chapter.find('.chapter_mode_edit').hasClass('chapter')) {
+        if (!$chapter.hasClass('chapter_mode_edit')) {
             $chapter.find('.chapter__content').css({position:'relative'}).animate({
                 right: '-50%',
                 width: '50%'
@@ -57,12 +58,12 @@ Site.Views.ChapterView = Backbone.View.extend({
                 display: 'block',
                 opacity: 0
             }, 1000, function() {
-                $chapter.find('.chapter').addClass('chapter_mode_edit');
+                $chapter.addClass('chapter_mode_edit');
             });
         }
 
-        this.$el.find('.chapter__editor-form .chapter__editor-title').val( chapter.title );
-        this.$el.find('.chapter__editor-form .chapter__editor-content').html( chapter.content );
+        $chapter.find('.chapter__editor-form .chapter__editor-title').val( chapter.title );
+        $chapter.find('.chapter__editor-form .chapter__editor-content').html( chapter.content );
     },
     deleteChapter: function() {
         this.$el.remove();
@@ -76,7 +77,7 @@ Site.Views.ChapterView = Backbone.View.extend({
             title: chapter.title,
             content: chapter.content
         });
-        this.$el.find('.chapter').removeClass('chapter_mode_edit');
+        this.$el.removeClass('chapter_mode_edit');
         this.render();
         return false;
     },
