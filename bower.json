@@ -1,0 +1,12 @@
+{
+  "name": "ducking-octo-ninja",
+  "version": "0.0.1",
+  "dependencies": {
+    "underscore": "~1.6.0",
+    "backbone": "~1.1.2",
+    "jquery": "~2.1.1",
+    "markdown": "0.5.0",
+    "to-markdown": "0.0.2"
+  },
+  "private": true
+}

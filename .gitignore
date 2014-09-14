@@ -13,5 +13,5 @@ REVISION
 Gemfile.lock
 Thumbs.db
 
-vstk-kirpich/node_modules/
-vstk-autopromsnab/node_modules/
+node_modules/
+bower_components/
