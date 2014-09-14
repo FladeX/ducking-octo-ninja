@@ -38,15 +38,16 @@ html[xmlns] .clearfix {
   padding: 40px 30px;
   position: relative;
 }
-.chapter__title {
-  color: #111;
-  font-size: 26px;
-  padding-right: 120px;
-}
+.chapter__content,
 .chapter__text {
   color: #212121;
   font-size: 13px;
   line-height: 160%;
+}
+.chapter__title {
+  color: #111;
+  font-size: 26px;
+  padding-right: 120px;
 }
 .chapter__controls {
   position: absolute;
