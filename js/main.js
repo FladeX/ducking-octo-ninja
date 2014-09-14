@@ -48,9 +48,8 @@ Site.Views.ChapterView = Backbone.View.extend({
     saveChapter: function() {
         var chapter = {
             title: this.$el.find('.chapter__editor-title').val(),
-            content: markdown.toHTML(this.$el.find('.chapter__editor-content').text())
+            content: markdown.toHTML(this.$el.find('.chapter__editor-content').val())
         };
-        console.log( chapter.content );
         this.model.set({
             title: chapter.title,
             content: chapter.content
