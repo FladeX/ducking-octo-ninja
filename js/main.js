@@ -30,6 +30,9 @@ Site.Views.ChapterView = Backbone.View.extend({
         var chapter = new Site.Models.Chapter({title: '', content: ''});
         chapters.add( chapter );
         $('.chapter__controls-icon_mode_edit:last').click();
+        $('html, body').animate({
+            scrollTop: $('.chapter__controls-icon_mode_edit:last').offset().top
+        }, 1500);
     },
     editChapter: function() {
         var chapter = {

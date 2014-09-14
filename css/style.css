@@ -82,11 +82,15 @@ html[xmlns] .clearfix {
   float: left;
   width: 50%;
 }
+.chapter__editor_mode_blank {
+  float: none;
+  width: 100%;
+}
 .chapter__editor-form {
   background: #fff;
   margin: 0;
   padding: 15px 0;
-  width: 90%;
+  width: 100%;
 }
 .chapter__editor-field {
   height: 50px;
@@ -141,6 +145,13 @@ html[xmlns] .clearfix {
   display: block;
 }
 .chapter_mode_edit .chapter__content {
+  box-sizing: border-box;
   float: left;
+  padding-left: 15px;
   width: 50%;
+}
+.chapter_mode_edit .chapter__content_mode_blank {
+  float: none;
+  display: none;
+  width: 0;
 }

@@ -78,11 +78,15 @@ html[xmlns] .clearfix {
         display: none;
         float: left;
         width: 50%;
+        &_mode_blank {
+            float: none;
+            width: 100%;
+        }
         &-form {
             background: #fff;
             margin: 0;
             padding: 15px 0;
-            width: 90%;
+            width: 100%;
         }
         &-field {
             height: 50px;
@@ -139,8 +143,15 @@ html[xmlns] .clearfix {
             display: block;
         }
         .chapter__content {
+            box-sizing: border-box;
             float: left;
+            padding-left: 15px;
             width: 50%;
+            &_mode_blank {
+                float: none;
+                display: none;
+                width: 0;
+            }
         }
     }
 }

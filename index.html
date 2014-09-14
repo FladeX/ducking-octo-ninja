@@ -13,16 +13,16 @@
 <body>
 <script id="chapterTemplate" type="text/template">
     <div class="chapter clearfix">
-        <div class="chapter__editor">
+        <div class="chapter__editor<% if (title == '' && content == '') { %> chapter__editor_mode_blank<% } %>">
             <form class="chapter__editor-form" method="post" action="">
                 <div class="chapter__editor-field">
                     <label class="chapter__editor-label">
-                        <input class="chapter__editor-title" type="text" name="title" value="" />
+                        <input class="chapter__editor-title" type="text" name="title" value="" placeholder="Title" />
                     </label>
                 </div>
                 <div class="chapter__editor-field chapter__editor-field_mode_multirows">
                     <label class="chapter__editor-label">
-                        <textarea class="chapter__editor-content">
+                        <textarea class="chapter__editor-content" placeholder="Content">
                         </textarea>
                     </label>
                 </div>
@@ -31,7 +31,7 @@
                 </div>
             </form>
         </div>
-        <div class="chapter__content">
+        <div class="chapter__content<% if (title == '' && content == '') { %> chapter__content_mode_blank<% } %>">
             <h2 class="chapter__title"><%= title %></h2>
             <%= content %>
         </div>
