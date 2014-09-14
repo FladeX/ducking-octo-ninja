@@ -12,7 +12,9 @@ Site.Views.ChapterView = Backbone.View.extend({
         'click .chapter__controls-icon_mode_add': 'addChapter',
         'click .chapter__controls-icon_mode_edit': 'editChapter',
         'click .chapter__controls-icon_mode_delete': 'deleteChapter',
-        'click .chapter__editor-submit': 'saveChapter'
+        'click .chapter__editor-submit': 'saveChapter',
+        'input .chapter__editor-title': 'changeChapter',
+        'input .chapter__editor-content': 'changeChapter'
     },
 
     initialize: function() {
@@ -57,6 +59,14 @@ Site.Views.ChapterView = Backbone.View.extend({
         });
         this.$el.find('.chapter').removeClass('chapter_mode_edit');
         this.render();
+        return false;
+    },
+    changeChapter: function() {
+        var chapter = {
+            title: '<h2 class="chapter__title">' + this.$el.find('.chapter__editor-title').val() + '</h2>',
+            content: markdown.toHTML(this.$el.find('.chapter__editor-content').val())
+        };
+        this.$el.find('.chapter__content').html( chapter.title + chapter.content );
         return false;
     }
 });
