@@ -33,10 +33,12 @@ html[xmlns] .clearfix {
 }
 .chapter {
   background: #efefef;
+  box-sizing: border-box;
   font-family: Verdana, sans-serif;
   margin-top: 40px;
   padding: 40px 30px;
   position: relative;
+  width: 100%;
 }
 .chapter__content,
 .chapter__text {

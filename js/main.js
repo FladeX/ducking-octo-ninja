@@ -3,9 +3,7 @@ var Site = {
     Views: {},
     Collections: {}
 };
-Site.Models.Chapter = Backbone.Model.extend({
-    defaults: chapters_data[0],
-});
+Site.Models.Chapter = Backbone.Model.extend({});
 Site.Views.ChapterView = Backbone.View.extend({
     tagName: 'div',
     template: $('#chapterTemplate').html(),
@@ -29,7 +27,9 @@ Site.Views.ChapterView = Backbone.View.extend({
     },
 
     addChapter: function() {
-        console.log('add chapter');
+        var chapter = new Site.Models.Chapter({title: '', content: ''});
+        chapters.add( chapter );
+        $('.chapter__controls-icon_mode_edit:last').click();
     },
     editChapter: function() {
         var chapter = {
@@ -39,11 +39,9 @@ Site.Views.ChapterView = Backbone.View.extend({
         this.$el.find('.chapter').addClass('chapter_mode_edit');
         this.$el.find('.chapter__editor-form .chapter__editor-title').val( chapter.title );
         this.$el.find('.chapter__editor-form .chapter__editor-content').html( chapter.content );
-        console.log('edit chapter');
     },
     deleteChapter: function() {
         this.$el.remove();
-        console.log('delete chapter');
     },
     saveChapter: function() {
         var chapter = {
