@@ -35,7 +35,7 @@ Site.Views.ChapterView = Backbone.View.extend({
         $('.chapter__controls-icon_mode_edit:last').click();
         $('html, body').animate({
             scrollTop: $('.chapter__controls-icon_mode_edit:last').offset().top
-        }, 1500);
+        }, 1000);
     },
     editChapter: function() {
         var chapter = {
@@ -48,16 +48,16 @@ Site.Views.ChapterView = Backbone.View.extend({
             $chapter.find('.chapter__content').css({position:'relative'}).animate({
                 right: '-50%',
                 width: '50%'
-            }, 1000, function() {
+            }, 500, function() {
                 $chapter.find('.chapter__content').css({position:'static'})
                 $chapter.find('.chapter__editor-form').animate({
                     opacity: 1
-                }, 1000);
+                }, 500);
             });
             $chapter.find('.chapter__editor-form').animate({
                 display: 'block',
                 opacity: 0
-            }, 1000, function() {
+            }, 500, function() {
                 $chapter.addClass('chapter_mode_edit');
             });
         }
