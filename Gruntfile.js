@@ -27,6 +27,12 @@ module.exports = function(grunt) {
                 }
             }
         },
+        concat: {
+            main: {
+                src: ['js/data.js', 'js/main.js'],
+                dest: 'js/scripts.js'
+            }
+        },
         watch: {
             less: {
                 files: ['css/*.less'],
@@ -39,6 +45,7 @@ module.exports = function(grunt) {
     grunt.loadNpmTasks('grunt-contrib-watch');
     grunt.loadNpmTasks('grunt-contrib-copy');
     grunt.loadNpmTasks('grunt-contrib-coffee');
+    grunt.loadNpmTasks('grunt-contrib-concat');
 
-    grunt.registerTask('default', ['less', 'copy', 'coffee']);
+    grunt.registerTask('default', ['less', 'copy', 'coffee', 'concat']);
 };
