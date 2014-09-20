@@ -7,6 +7,14 @@ module.exports = function(grunt) {
                 }
             }
         },
+        coffee: {
+            main: {
+                files: {
+                    'js/data.js': 'js/data.coffee',
+                    'js/main.js': 'js/main.coffee'
+                }
+            }
+        },
         copy: {
             main: {
                 files: {
@@ -30,6 +38,7 @@ module.exports = function(grunt) {
     grunt.loadNpmTasks('grunt-contrib-less');
     grunt.loadNpmTasks('grunt-contrib-watch');
     grunt.loadNpmTasks('grunt-contrib-copy');
+    grunt.loadNpmTasks('grunt-contrib-coffee');
 
-    grunt.registerTask('default', ['less', 'copy']);
+    grunt.registerTask('default', ['less', 'copy', 'coffee']);
 };

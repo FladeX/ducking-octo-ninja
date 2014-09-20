@@ -30,7 +30,6 @@
     "commit": "f2c51e4cf0f136e97cb1d65fd5376110d877d544"
   },
   "_source": "git://github.com/domchristie/to-markdown.git",
-  "_target": "~0.0.2",
-  "_originalSource": "to-markdown",
-  "_direct": true
+  "_target": "0.0.2",
+  "_originalSource": "to-markdown"
 }
