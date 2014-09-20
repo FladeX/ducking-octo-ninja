@@ -33,6 +33,13 @@ module.exports = function(grunt) {
                 dest: 'js/scripts.js'
             }
         },
+        uglify: {
+            main: {
+                files: {
+                    'js/scripts.min.js': 'js/scripts.js'
+                }
+            }
+        },
         watch: {
             less: {
                 files: ['css/*.less'],
@@ -46,6 +53,7 @@ module.exports = function(grunt) {
     grunt.loadNpmTasks('grunt-contrib-copy');
     grunt.loadNpmTasks('grunt-contrib-coffee');
     grunt.loadNpmTasks('grunt-contrib-concat');
+    grunt.loadNpmTasks('grunt-contrib-uglify');
 
-    grunt.registerTask('default', ['less', 'copy', 'coffee', 'concat']);
+    grunt.registerTask('default', ['less', 'copy', 'coffee', 'concat', 'uglify']);
 };

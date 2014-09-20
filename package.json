@@ -12,7 +12,8 @@
     "grunt-contrib-watch": "latest",
     "grunt-contrib-copy": "latest",
     "grunt-contrib-coffee": "latest",
-    "grunt-contrib-concat": "latest"
+    "grunt-contrib-concat": "latest",
+    "grunt-contrib-uglify": "latest"
   },
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
